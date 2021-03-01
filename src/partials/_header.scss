@@ -1,0 +1,22 @@
+header{
+    background-color: $colorBlack;
+    height: $headerFooterSize;
+    .container {
+        width: 1070;
+        height: 100%;
+        margin: auto;
+        padding: 20px;
+        @include flexBox;
+    }
+    img {
+        height: 50px;
+    }
+    h1{
+        color: $colorGreen;
+    }
+    select{
+        height: 30px;
+        background-color: $colorGreen;
+        border-radius: 5px;
+    }
+}

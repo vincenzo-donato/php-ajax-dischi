@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1E2D3B;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #2e3a46;
+  height: 70px;
+}
+header .container {
+  width: 1070;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header img {
+  height: 50px;
+}
+header h1 {
+  color: #10aa18;
+}
+header select {
+  height: 30px;
+  background-color: #10aa18;
+  border-radius: 5px;
+}
+
+.box-dischi {
+  width: 1070px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 80px 0px;
+  margin: auto;
+}
+
+.disco {
+  flex-basis: 200px;
+  height: 350px;
+  margin: 10px;
+  background-color: #2e3a46;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+}
+.disco img {
+  width: 150px;
+  border-radius: 10%;
+}
+.disco h3 {
+  color: white;
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.disco span {
+  margin: 5px 0px;
+  color: grey;
+}
+.disco i {
+  color: white;
+  position: absolute;
+  font-size: 60px;
+  opacity: 0;
+}
+.disco:hover {
+  opacity: 0.5;
+  box-shadow: 5px 5px 5px white;
+}
+.disco:hover i {
+  cursor: pointer;
+  opacity: 1;
+}
+
+footer {
+  height: 70px;
+  text-align: center;
+  padding: 5px;
+  background-color: #2e3a46;
+}
+footer .box-icons {
+  margin: 5px 0px;
+}
+footer .box-icons i {
+  color: grey;
+  font-size: 30px;
+  margin-right: 5px;
+}
+footer .box-icons i:hover {
+  cursor: pointer;
+  color: white;
+}
+footer .copyright {
+  color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .copyright p {
+  width: 300px;
+}
+footer .copyright p:hover {
+  color: white;
+  cursor: pointer;
+}

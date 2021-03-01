@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK: Link collegamento STYLE CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- LINK: Collegamento VUE JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- LINK: Collegamento AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- LINK: Font awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>BOOTIFY-VUE-PHP</title>
+</head>
+<body>
+    
+    <!-- CONTAINER GENERALE VUE  -->
+    <div id="container">
+
+        <!-- BOX: Header  -->
+        <header>
+
+            <!-- CONTENITORE: Img logo + select  -->
+            <div class="container">
+
+                <img src="img/logo.png" alt="logo" />
+                <h1>Bootify</h1>
+                <select v-model='visualizza'>
+                    <option :value="genere" v-for='(genere, index) in generi' >{{genere}}</option>
+                </select>
+
+            </div>
+            <!--FINE CONTENITORE: Img logo + select  -->
+            
+        </header>
+        <!--END BOX: Header  -->
+
+        <!-- BOX: Main  -->
+        <main>
+
+            <!-- BOX: Box dischi  -->
+            <div class="box-dischi">
+
+                <!-- BOX: Box disco  -->
+                <div v-for='disco in dischi' v-if='visualizza == "All" || visualizza == disco.genre' class="disco">     
+                    <img :src="disco.poster" :alt="disco.title">
+                    <h3>{{disco.title}}</h3>
+                    <span>{{disco.author}}</span>
+                    <span>{{disco.year}}</span>
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <!-- END BOX: Box disco  -->
+
+            </div>
+            <!-- END BOX: Box dischi  -->
+
+        </main>
+        <!--END BOX: Main  -->
+
+        <!-- BOX: Footer  -->
+        <footer>
+
+            <!-- BOX : Icons  -->
+            <div class="box-icons">
+                <i v-for='icon in iconsSocial' :class="icon"></i>
+            </div>
+            <!-- END BOX : Icons  -->
+
+            <!-- BOX: Copyright  -->
+            <div class="copyright">
+                <p>© 2021 VDPJCT. All Rights Reserved</p>
+            </div>
+            <!-- END BOX: Copyright  -->
+
+        </footer>
+        <!-- END BOX: Footer  -->
+
+    </div>
+    <!--END CONTAINER GENERALE VUE  -->
+
+
+    <!-- Collegamento js  -->
+    <script src="script/script.js"></script>
+
+</body>
+</html>

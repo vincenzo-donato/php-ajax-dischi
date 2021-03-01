@@ -1,0 +1,29 @@
+footer{
+    height: $headerFooterSize;
+    text-align: center;
+    padding: 5px;
+    background-color: $colorBlack;
+    .box-icons{
+        margin: 5px 0px;
+        i{
+            color: $colorGrey;
+            font-size: 30px;
+            margin-right: 5px;
+            &:hover{
+                cursor: pointer;
+                color: $colorWhite;
+            }
+        }
+    }
+    .copyright{
+        color: $colorGrey;
+        @include flexBox;
+        p{
+            width: 300px;
+            &:hover{
+                color: $colorWhite;
+                cursor: pointer;
+            }
+        }
+    }
+}

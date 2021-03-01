@@ -1,0 +1,38 @@
+.disco{
+    flex-basis: 200px;
+    height: 350px;
+    margin: 10px;
+    background-color: $colorBlack;
+    padding: 25px;
+    @include flexBox;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    img {
+        width: 150px;
+        border-radius: 10%;
+    }
+    h3{
+        color: $colorWhite;
+        margin: 20px 0px;
+        font-size: 18px;
+    }
+    span{
+        margin: 5px 0px;
+        color: $colorGrey;
+    }
+    i{
+        color: $colorWhite;
+        position: absolute;
+        font-size: 60px;
+        opacity: 0;
+    }
+    &:hover{
+        opacity: 0.5;
+        box-shadow: 5px 5px 5px $colorWhite;
+        i{
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}
